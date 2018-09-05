@@ -1,22 +1,28 @@
 let fibNumbPosition = parseInt(prompt('Enter a Fibonacci number position'));
 
 // way1
-let f1 = 1;
-let f2 = 1;
-let fcurrent = 1;
-for (let n = 3; n <= fibNumbPosition; n++) {
-    fcurrent = f1 + f2;
-    f1 = f2;
-    f2 = fcurrent;
+function fib_for_loop(n) {
+    let f1 = 1;
+    let f2 = 1;
+    let fcurrent = 1;
+    for (let n = 3; n <= fibNumbPosition; n++) {
+        fcurrent = f1 + f2;
+        f1 = f2;
+        f2 = fcurrent;
+    }
+    return fcurrent + " calculated with for loop";
 }
-alert(fcurrent + " calculated with for loop");
+alert(fib_for_loop(fibNumbPosition));
 
 //way2
-let fArr = [1, 1];
-for (let i = 1; i < fibNumbPosition - 1; i++) {
-    fArr.push(fArr[i - 1] + fArr[i]);
+function fib_array(i) {
+    let fArr = [1, 1];
+    for (let i = 1; i < fibNumbPosition - 1; i++) {
+        fArr.push(fArr[i - 1] + fArr[i]);
+    }
+    return fArr.pop() + " calculated with array";
 }
-alert(fArr.pop() + " calculated with array");
+alert(fib_array(fibNumbPosition));
 
 //way3
 function fibRec(p) {
