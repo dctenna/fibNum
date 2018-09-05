@@ -3,13 +3,13 @@ let fibNumbPosition = parseInt(prompt('Enter a Fibonacci number position'));
 // way1
 let f1 = 1;
 let f2 = 1;
-let fcur = 1;
+let fcurrent = 1;
 for (let n = 3; n <= fibNumbPosition; n++) {
-    fcur = f1 + f2;
+    fcurrent = f1 + f2;
     f1 = f2;
-    f2 = fcur;
+    f2 = fcurrent;
 }
-alert(fcur + " calculated with for loop");
+alert(fcurrent + " calculated with for loop");
 
 //way2
 let fArr = [1, 1];
